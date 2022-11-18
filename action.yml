@@ -4,18 +4,18 @@ branding:
   icon: package
   color: blue
 inputs:
-  package-name:
-    description: Name of the package to upload
-    required: true
+  deb-package-name:
+    description: Name of the deb package to upload
+    required: false
+  rpm-package-name:
+    description: Name of the rpm package to upload
+    required: false
   packagecloud-username:
     description: The username to use on PackageCloud.io
     required: true
   packagecloud-repo:
     description: The repository to upload on this user
     required: true
-  packagecloud-distrib:
-    description: The distribution/version this package is meant to
-    required: false
   packagecloud-token:
     description: The Token with push access
     required: true

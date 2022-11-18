@@ -26,14 +26,14 @@ UPLOAD_PATH="${PACKAGECLOUD_USERNAME}/${PACKAGECLOUD_REPO}"
 if [ -n "${DEB_PACKAGE_NAME}" ]; then
     for DST in ${DEB_DSTS[@]}; do
 				echo "Uploading ${DEB_PACKAGE_NAME} to $DST"
-				package_cloud push ${UPLOAD_PATH}/$DST ${DEB_PACKAGE_NAME} --skip-errors
+				package_cloud push ${UPLOAD_PATH}/${DST} ${DEB_PACKAGE_NAME} --skip-errors
     done
 fi
 
 if [ -n "${RPM_PACKAGE_NAME}" ]; then
     for DST in ${RPM_DSTS[@]}; do
 				echo "Uploading ${RPM_PACKAGE_NAME} to $DST"
-				package_cloud push ${UPLOAD_PATH}/$DST ${RPM_PACKAGE_NAME} --skip-errors
+				package_cloud push ${UPLOAD_PATH}/${DST} ${RPM_PACKAGE_NAME} --skip-errors
     done
 fi
 # if [ -n "${PACKAGECLOUD_DISTRIB}" ]; then
