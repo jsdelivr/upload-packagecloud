@@ -26,8 +26,8 @@ runs:
       run: ${{ github.action_path }}/push.sh
       shell: bash
       env:
-        PACKAGE_NAME: ${{ inputs.package-name }}
+        DEB_PACKAGE_NAME: ${{ inputs.deb-package-name }}
+        RPM_PACKAGE_NAME: ${{ inputs.rpm-package-name }}
         PACKAGECLOUD_USERNAME: ${{ inputs.packagecloud-username }}
         PACKAGECLOUD_REPO: ${{ inputs.packagecloud-repo }}
-        PACKAGECLOUD_DISTRIB: ${{ inputs.packagecloud-distrib }}
         PACKAGECLOUD_TOKEN: ${{ inputs.packagecloud-token }}
